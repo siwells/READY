@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>READY.</title>
-    <link>/</link>
+    <link>https://siwells.github.io/READY/</link>
     <description>Recent content on READY.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://siwells.github.io/READY/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Slides</title>
-      <link>/topics/slides/</link>
+      <link>https://siwells.github.io/READY/topics/slides/</link>
       <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>
       
-      <guid>/topics/slides/</guid>
+      <guid>https://siwells.github.io/READY/topics/slides/</guid>
       <description>Links to the slides for my talk.</description>
     </item>
     
     <item>
       <title>Example #1: Hello Napier</title>
-      <link>/topics/example_01/</link>
+      <link>https://siwells.github.io/READY/topics/example_01/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>/topics/example_01/</guid>
+      <guid>https://siwells.github.io/READY/topics/example_01/</guid>
       <description>console.log(&amp;#34;hello napier!!!&amp;#34;); </description>
     </item>
     
     <item>
       <title>Example #2: Screen Interaction</title>
-      <link>/topics/example_02/</link>
+      <link>https://siwells.github.io/READY/topics/example_02/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>/topics/example_02/</guid>
+      <guid>https://siwells.github.io/READY/topics/example_02/</guid>
       <description>document.body.style.backgroundColor = &amp;#34;lightgreen&amp;#34;; </description>
     </item>
     
