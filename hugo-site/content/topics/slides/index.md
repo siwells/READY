@@ -6,6 +6,10 @@ weight: 1
 summary: Links to the slides for my talk.
 ---
 
+
+
+<!--more-->
+
 ## Download
 
 Download your own copy here
