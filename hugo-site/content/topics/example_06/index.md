@@ -4,6 +4,7 @@ date: 2021-08-06T14:00:37+10:00
 weight: 7
 ---
 
+<!--more-->
 
 ```
 let c = document.createElement("canvas");
