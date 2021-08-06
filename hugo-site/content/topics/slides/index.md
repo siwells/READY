@@ -6,7 +6,7 @@ weight: 1
 summary: Links to the slides for my talk.
 ---
 
-
+This is probably the best place to start to get an overview of things. All of the examples are from the second part of the talk (although they're now starting to take on a life of their own).
 
 <!--more-->
 
