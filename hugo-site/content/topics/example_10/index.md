@@ -5,6 +5,8 @@ weight: 11
 ---
 
 
+<!--more-->
+
 ```
 function draw(generation, population){
 	for (var i=0; i<population.length; i++) 	{
