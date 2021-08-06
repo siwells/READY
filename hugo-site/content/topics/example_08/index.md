@@ -5,6 +5,8 @@ weight: 9
 ---
 
 
+<!--more-->
+
 ```
 var context = new (window.AudioContext || window.webkit.AudioContext)();
 var freq = {
