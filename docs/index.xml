@@ -38,5 +38,14 @@
       <description>document.body.style.backgroundColor = &amp;#34;lightgreen&amp;#34;; </description>
     </item>
     
+    <item>
+      <title>Example #3: Screen Output</title>
+      <link>https://siwells.github.io/READY/topics/example_03/</link>
+      <pubDate>Fri, 06 Aug 2021 13:50:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_03/</guid>
+      <description>let d = new Date(); document.body.innerHTML = &amp;#34;&amp;lt;h1&amp;gt;Today&amp;#39;s date is &amp;#34; + d + &amp;#34;&amp;lt;/h1&amp;gt;&amp;#34; </description>
+    </item>
+    
   </channel>
 </rss>
