@@ -4,6 +4,7 @@ date: 2021-08-06T14:01:37+10:00
 weight: 8
 ---
 
+<!--more-->
 
 ```
 var context = new (window.AudioContext || window.webkitAudioContext)();
