@@ -1,11 +1,14 @@
 ---
-title: 'Example #8: Audio - A Simple Bit-Tune'
+title: 'Example #8: Audio - A Simple Chip-Tune'
 date: 2021-08-06T14:02:37+10:00
-weight: 9
+weight: 80
 ---
 
+One way to play a simple melody...
 
 <!--more-->
+
+Notice that we've chosen to use a square wave for our oscillator so that we can get the authentic 8-bit, bit tune, style of sound?
 
 ```
 var context = new (window.AudioContext || window.webkit.AudioContext)();
