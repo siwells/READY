@@ -5,6 +5,8 @@ weight: 2
 ---
 
 
+<!--more-->
+
 ```js
 console.log("hello napier!!!");
 ```
