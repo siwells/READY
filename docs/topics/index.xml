@@ -47,5 +47,68 @@
       <description>let d = new Date(); document.body.innerHTML = &amp;#34;&amp;lt;h1&amp;gt;Today&amp;#39;s date is &amp;#34; + d + &amp;#34;&amp;lt;/h1&amp;gt;&amp;#34; </description>
     </item>
     
+    <item>
+      <title>Example #4: Interacting with the document</title>
+      <link>https://siwells.github.io/READY/topics/example_04/</link>
+      <pubDate>Fri, 06 Aug 2021 13:56:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_04/</guid>
+      <description>let p = document.createElement(&amp;#34;P&amp;#34;); let t = document.createTextNode(&amp;#34;Hello Napier!!!&amp;#34;); p.appendChild(t); document.body.replaceWith(p); </description>
+    </item>
+    
+    <item>
+      <title>Example #5: Graphics: Canvas Colour</title>
+      <link>https://siwells.github.io/READY/topics/example_05/</link>
+      <pubDate>Fri, 06 Aug 2021 13:57:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_05/</guid>
+      <description>var c = document.createElement(&amp;#34;Canvas&amp;#34;); c.id = &amp;#34;cv&amp;#34;; c.style.cssText = &amp;#39; height: 100%; width: 100%; position:absolute; overflow:hidden; background-color: black; &amp;#39;; var ctx = c.getContext(&amp;#34;2d&amp;#34;); ctx.canvas.width = window.innerWidth; ctx.canvas.height = window.innerHeight; document.body.replaceWith(c); </description>
+    </item>
+    
+    <item>
+      <title>Example #6: Graphics - Draw a Circle</title>
+      <link>https://siwells.github.io/READY/topics/example_06/</link>
+      <pubDate>Fri, 06 Aug 2021 14:00:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_06/</guid>
+      <description>let c = document.createElement(&amp;#34;canvas&amp;#34;); var ctx = c.getContext(&amp;#34;2d&amp;#34;); ctx.beginPath(); ctx.arc(95,50,40,0,2*Math.PI); ctx.stroke(); document.body.replaceWith(c); </description>
+    </item>
+    
+    <item>
+      <title>Example #7: Audio - Generate a Tone</title>
+      <link>https://siwells.github.io/READY/topics/example_07/</link>
+      <pubDate>Fri, 06 Aug 2021 14:01:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_07/</guid>
+      <description>var context = new (window.AudioContext || window.webkitAudioContext)(); var oscillator = context.createOscillator(); oscillator.type = &amp;#39;sine&amp;#39;; oscillator.frequency.setValueAtTime(220, context.currentTime); oscillator.connect(context.destination); oscillator.start(0); </description>
+    </item>
+    
+    <item>
+      <title>Example #8: Audio - A Simple Bit-Tune</title>
+      <link>https://siwells.github.io/READY/topics/example_08/</link>
+      <pubDate>Fri, 06 Aug 2021 14:02:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_08/</guid>
+      <description>var context = new (window.AudioContext || window.webkit.AudioContext)(); var freq = { &amp;#39;c4&amp;#39; :261.6256, &amp;#39;c4#&amp;#39; :277.1826, &amp;#39;d4&amp;#39; :293.6648, &amp;#39;d4#&amp;#39; :311.1270, &amp;#39;e4&amp;#39; :329.6276, &amp;#39;f4&amp;#39; :349.2282, &amp;#39;f4#&amp;#39; :369.9944, &amp;#39;g4&amp;#39; :391.9954, &amp;#39;g4#&amp;#39; :415.3047, &amp;#39;a4&amp;#39; :440.00, &amp;#39;a4#&amp;#39; :466.16, &amp;#39;b4&amp;#39; :493.92, &amp;#39;c5&amp;#39; :523.28, &amp;#39;c5#&amp;#39; :554.40, &amp;#39;d5&amp;#39; :587.36, &amp;#39;d5#&amp;#39; :622.24, &amp;#39;e5&amp;#39; :659.28, &amp;#39;f5&amp;#39; :698.48, &amp;#39;f5#&amp;#39; :740.00, &amp;#39;g5&amp;#39; :784.00, &amp;#39;g5#&amp;#39; :830.64, &amp;#39;a5&amp;#39; :880.0000 } for (i in D = [&amp;#39;e5&amp;#39;,, &amp;#39;e5&amp;#39;,, &amp;#39;e5&amp;#39;,, &amp;#39;c5&amp;#39;,, &amp;#39;e5&amp;#39;,, &amp;#39;g5&amp;#39;,, &amp;#39;g5&amp;#39;]) { console.log(i); var oscillator = context.</description>
+    </item>
+    
+    <item>
+      <title>Example #9: Audio - A Theremin</title>
+      <link>https://siwells.github.io/READY/topics/example_09/</link>
+      <pubDate>Fri, 06 Aug 2021 14:03:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_09/</guid>
+      <description>var context = new (window.AudioContext || window.webkitAudioContext)(); var oscillator = context.createOscillator(); var volume = context.createGain(); var active = false; volume.gain.setValueAtTime(0, context.currentTime); oscillator.connect(volume).connect(context.destination); oscillator.start(0); document.addEventListener(&amp;#39;mousedown&amp;#39;,function(e){on(e)}) document.addEventListener(&amp;#39;mousemove&amp;#39;,function(e){play(e)}) document.addEventListener(&amp;#39;mouseup&amp;#39;,function(e){off(e)}) function on(e){ active = true; e.preventDefault() oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime); volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime); } function play(e){ e.preventDefault() if(active){ oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime); volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime); } } function off(e){ active = false; volume.gain.setValueAtTime(0, context.currentTime); } </description>
+    </item>
+    
+    <item>
+      <title>Example #10: Cellular Automata</title>
+      <link>https://siwells.github.io/READY/topics/example_10/</link>
+      <pubDate>Fri, 06 Aug 2021 14:04:37 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/example_10/</guid>
+      <description>function draw(generation, population){ for (var i=0; i&amp;lt;population.length; i++) { ctx.rect(i*dimension, generation*dimension, dimension, dimension) if(population[i] === 1) { ctx.fillRect(i*dimension, generation*dimension, dimension, dimension) } ctx.stroke(); } } function next_gen(old) { var old = [0].concat(old, [0]); var state = []; // The new state. for (var i=1; i&amp;lt;old.length-1; i++) { if (old[i-1] === 1 &amp;amp;&amp;amp; old[i] === 1 &amp;amp;&amp;amp; old[i+1] === 1) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;amp;&amp;amp; old[i] === 1 &amp;amp;&amp;amp; old[i+1] === 0) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;amp;&amp;amp; old[i] === 0 &amp;amp;&amp;amp; old[i+1] === 1) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;amp;&amp;amp; old[i] === 0 &amp;amp;&amp;amp; old[i+1] === 0) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;amp;&amp;amp; old[i] === 1 &amp;amp;&amp;amp; old[i+1] === 1) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;amp;&amp;amp; old[i] === 1 &amp;amp;&amp;amp; old[i+1] === 0) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;amp;&amp;amp; old[i] === 0 &amp;amp;&amp;amp; old[i+1] === 1) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;amp;&amp;amp; old[i] === 0 &amp;amp;&amp;amp; old[i+1] === 0) { state[i-1] = 0; } } return state; } var c = document.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Example #1: Hello Napier - READY.</title>
+  <title>Example #6: Graphics - Draw a Circle - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
@@ -94,7 +94,7 @@
       <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
@@ -114,7 +114,7 @@
       <a href="https://siwells.github.io/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://siwells.github.io/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
     </li>
     
@@ -141,9 +141,14 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Example #1: Hello Napier</h1>
+<h1 class="title">Example #6: Graphics - Draw a Circle</h1>
 <div class="content ">
-  <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hello napier!!!&#34;</span><span class="p">);</span>
+  <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let c = document.createElement(&#34;canvas&#34;);
+var ctx = c.getContext(&#34;2d&#34;);
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+document.body.replaceWith(c);
 </code></pre></div>
 </div>
 </div>

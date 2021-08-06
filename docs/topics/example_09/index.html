@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Example #1: Hello Napier - READY.</title>
+  <title>Example #9: Audio - A Theremin - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
@@ -94,7 +94,7 @@
       <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
@@ -126,7 +126,7 @@
       <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Bit-Tune</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
     </li>
     
@@ -141,9 +141,42 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Example #1: Hello Napier</h1>
+<h1 class="title">Example #9: Audio - A Theremin</h1>
 <div class="content ">
-  <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hello napier!!!&#34;</span><span class="p">);</span>
+  <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">var context = new (window.AudioContext || window.webkitAudioContext)();
+var oscillator = context.createOscillator();
+var volume = context.createGain();
+var active = false;
+
+volume.gain.setValueAtTime(0, context.currentTime);
+
+oscillator.connect(volume).connect(context.destination);
+oscillator.start(0);
+
+document.addEventListener(&#39;mousedown&#39;,function(e){on(e)})
+document.addEventListener(&#39;mousemove&#39;,function(e){play(e)})
+document.addEventListener(&#39;mouseup&#39;,function(e){off(e)})
+
+function on(e){
+    active = true;
+    e.preventDefault()
+    oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime);
+    volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime);
+}
+
+
+function play(e){
+    e.preventDefault()
+    if(active){
+        oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime);
+        volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime);
+    }
+}
+
+function off(e){
+    active = false;
+    volume.gain.setValueAtTime(0, context.currentTime);
+}
 </code></pre></div>
 </div>
 </div>

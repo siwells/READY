@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Example #1: Hello Napier - READY.</title>
+  <title>Example #4: Interacting with the document - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
@@ -94,7 +94,7 @@
       <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
@@ -106,7 +106,7 @@
       <a href="https://siwells.github.io/READY/topics/example_03/">Example #3: Screen Output</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://siwells.github.io/READY/topics/example_04/">Example #4: Interacting with the document</a>
     </li>
     
@@ -141,9 +141,12 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Example #1: Hello Napier</h1>
+<h1 class="title">Example #4: Interacting with the document</h1>
 <div class="content ">
-  <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hello napier!!!&#34;</span><span class="p">);</span>
+  <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let p = document.createElement(&#34;P&#34;);
+let t = document.createTextNode(&#34;Hello Napier!!!&#34;);
+p.appendChild(t);
+document.body.replaceWith(p);
 </code></pre></div>
 </div>
 </div>
