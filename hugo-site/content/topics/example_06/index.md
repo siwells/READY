@@ -1,7 +1,7 @@
 ---
 title: 'Example #6: Graphics - Draw a Circle'
 date: 2021-08-06T14:00:37+10:00
-weight: 7
+weight: 60
 ---
 
 Draw a circle on screen.
