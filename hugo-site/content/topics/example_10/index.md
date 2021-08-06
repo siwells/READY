@@ -1,9 +1,10 @@
 ---
 title: 'Example #10: Cellular Automata'
 date: 2021-08-06T14:04:37+10:00
-weight: 11
+weight: 100
 ---
 
+A rudimentary Cellular Automata. It only generates a limited number of generations, but illustrates how you can use a couple of functions to interact with the screen and create dynamic output.
 
 <!--more-->
 
