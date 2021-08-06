@@ -4,6 +4,9 @@ date: 2021-08-06T14:03:37+10:00
 weight: 10
 ---
 
+
+<!--more-->
+
 ```
 var context = new (window.AudioContext || window.webkitAudioContext)();
 var oscillator = context.createOscillator();
