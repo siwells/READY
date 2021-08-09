@@ -7362,7 +7362,7 @@ p {
             padding: 10px 8px 10px 8px;
             font-weight: 300; } }
 .sub-footer {
-  background: #f4f5fb;
+  background: #ffffff;
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 768px) {
