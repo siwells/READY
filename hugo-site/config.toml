@@ -17,10 +17,10 @@ pygmentsUseClasses = true
 # See https://gohugo.io/content-management/summaries/
 summaryLength = 0
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+#[[menu.main]]
+#    name = "Home"
+#    url = "/"
+#    weight = 1
 
 [[menu.main]]
     name = "Topics"
@@ -29,10 +29,10 @@ summaryLength = 0
 
 [params]
 #  google_analytics_id=""
-  homepage_button_link = '/topics'
-  homepage_button_text = 'Topics'
+#  homepage_button_link = '/topics'
+#  homepage_button_text = 'Topics'
 #  homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
-#  homepage_image = '/images/terminal.gif'
+  homepage_image = '/images/c64.png'
 
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
