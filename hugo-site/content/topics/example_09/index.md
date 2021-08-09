@@ -12,7 +12,6 @@ The sound only plays when the mouse button is down (so it also, kinda, sorta, em
 
 Note that if we wanted this to be even more accurate and authentic then there are some extra filters that we'd apply to the signal to match the hardware in a real Theremin. I'd also add a ramp down at the end of the signal to get rid of the click artefact when the sound turns on and off...
 
-
 ```
 var context = new (window.AudioContext || window.webkitAudioContext)();
 var oscillator = context.createOscillator();
@@ -49,3 +48,7 @@ function off(e){
     volume.gain.setValueAtTime(0, context.currentTime);
 }
 ```
+
+## Live Demo
+
+Try out a [live demo](https://siwells.github.io/READY/demos/example_09.html) of the Theremin
