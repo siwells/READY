@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://siwells.github.io/READY/topics/about/</link>
+      <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>
+      
+      <guid>https://siwells.github.io/READY/topics/about/</guid>
+      <description>&lt;p&gt;This site documents an annual lecture that I deliver to the incoming class of freshers in the school of computing at Edinburgh Napier University.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Slides</title>
       <link>https://siwells.github.io/READY/topics/slides/</link>
       <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>

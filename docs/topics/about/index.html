@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Example #10: Cellular Automata - READY.</title>
+  <title>About - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
@@ -78,7 +78,7 @@
   <h4>Topics</h4>
   <ul>
     
-    <li class="">
+    <li class="active ">
       <a href="https://siwells.github.io/READY/topics/about/">About</a>
     </li>
     
@@ -122,7 +122,7 @@
       <a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://siwells.github.io/READY/topics/example_10/">Example #10: Cellular Automata</a>
     </li>
     
@@ -133,46 +133,18 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Example #10: Cellular Automata</h1>
+<h1 class="title">About</h1>
 <div class="content ">
-  <p>A rudimentary Cellular Automata. It only generates a limited number of generations, but illustrates how you can use a couple of functions to interact with the screen and create dynamic output.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">function draw(generation, population){
-	for (var i=0; i&lt;population.length; i++) 	{
-    	ctx.rect(i*dimension, generation*dimension, dimension, dimension)
-    	if(population[i] === 1)
-        { ctx.fillRect(i*dimension, generation*dimension, dimension, dimension) }
-	    ctx.stroke();
-	}
-}
-function next_gen(old) {
-  var old = [0].concat(old, [0]);
-  var state = []; // The new state.
- 
-  for (var i=1; i&lt;old.length-1; i++) {
-           if (old[i-1] === 1 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 1) { state[i-1] = 0; }
-      else if (old[i-1] === 1 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 0) { state[i-1] = 0; }
-      else if (old[i-1] === 1 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 1) { state[i-1] = 0; }
-      else if (old[i-1] === 1 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 0) { state[i-1] = 1; }
-      else if (old[i-1] === 0 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 1) { state[i-1] = 1; }
-      else if (old[i-1] === 0 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 0) { state[i-1] = 1; }
-      else if (old[i-1] === 0 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 1) { state[i-1] = 1; }
-      else if (old[i-1] === 0 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 0) { state[i-1] = 0; }
-
-  }
-  return state;
-}
-var c = document.createElement(&#34;canvas&#34;);
-var ctx = c.getContext(&#34;2d&#34;);
-var dimension = 10
-var current = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-var next = [];
-var j =60;
-for (var i = 0; i &lt; j; i++) {
-    draw(i, current);
-    current = next_gen(current);
-} 
-document.body.replaceWith(c);
-</code></pre></div>
+  <p>This site documents an annual lecture that I deliver to the incoming class of freshers in the school of computing at Edinburgh Napier University.</p>
+<h2 id="who-me">Who Me?</h2>
+<p>I&rsquo;m <a href="http://www.simonwells.org">Simon Wells</a> and I&rsquo;m a lecturer in the School of Computing</p>
+<h2 id="the-lecture">The Lecture</h2>
+<p>In the lecture I try to do a few things:</p>
+<ul>
+<li>Talk about how computing has changed in my lifetime (through some biographical anecdotes and how this has made some things much easier and others more difficult).</li>
+<li>Talk about being the first person in your close family to successfully complete a university course.</li>
+<li>Talk about what it takes to become a decent coder (and suggest some ways to get started).</li>
+</ul>
 </div>
 </div>
 
