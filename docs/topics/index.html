@@ -123,7 +123,7 @@
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Bit-Tune</a>
+      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
     </li>
     
     <li class="">
@@ -153,77 +153,77 @@
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/slides/">Slides</a></h2>
-  <p>Links to the slides for my talk.</p>
+  <p><p>This is probably the best place to start to get an overview of things. All of the examples are from the second part of the talk (although they&rsquo;re now starting to take on a life of their own).</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a></h2>
-  <p>console.log(&#34;hello napier!!!&#34;); </p>
+  <p><p>Start our web programming journey with a variation of the tradional &ldquo;Hello World&rdquo;.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_02/">Example #2: Screen Interaction</a></h2>
-  <p>document.body.style.backgroundColor = &#34;lightgreen&#34;; </p>
+  <p><p>Set the background of the screen to a new and pleasing colour.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_03/">Example #3: Screen Output</a></h2>
-  <p>let d = new Date(); document.body.innerHTML = &#34;&lt;h1&gt;Today&#39;s date is &#34; + d + &#34;&lt;/h1&gt;&#34; </p>
+  <p><p>Output some information from JS to the screen, i.e. generate some HTML.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_04/">Example #4: Interacting with the document</a></h2>
-  <p>let p = document.createElement(&#34;P&#34;); let t = document.createTextNode(&#34;Hello Napier!!!&#34;); p.appendChild(t); document.body.replaceWith(p); </p>
+  <p><p>Creating a simple HTML document from JS.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a></h2>
-  <p>var c = document.createElement(&#34;Canvas&#34;); c.id = &#34;cv&#34;; c.style.cssText = &#39; height: 100%; width: 100%; position:absolute; overflow:hidden; background-color: black; &#39;; var ctx = c.getContext(&#34;2d&#34;); ctx.canvas.width = window.innerWidth; ctx.canvas.height = window.innerHeight; document.body.replaceWith(c); </p>
+  <p><p>Set the colour of the background to a given colour.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a></h2>
-  <p>let c = document.createElement(&#34;canvas&#34;); var ctx = c.getContext(&#34;2d&#34;); ctx.beginPath(); ctx.arc(95,50,40,0,2*Math.PI); ctx.stroke(); document.body.replaceWith(c); </p>
+  <p><p>Draw a circle on screen.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_07/">Example #7: Audio - Generate a Tone</a></h2>
-  <p>var context = new (window.AudioContext || window.webkitAudioContext)(); var oscillator = context.createOscillator(); oscillator.type = &#39;sine&#39;; oscillator.frequency.setValueAtTime(220, context.currentTime); oscillator.connect(context.destination); oscillator.start(0); </p>
+  <p><p>Generate a simple audio tone at a give freqency.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
-  <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Bit-Tune</a></h2>
-  <p>var context = new (window.AudioContext || window.webkit.AudioContext)(); var freq = { &#39;c4&#39; :261.6256, &#39;c4#&#39; :277.1826, &#39;d4&#39; :293.6648, &#39;d4#&#39; :311.1270, &#39;e4&#39; :329.6276, &#39;f4&#39; :349.2282, &#39;f4#&#39; :369.9944, &#39;g4&#39; :391.9954, &#39;g4#&#39; :415.3047, &#39;a4&#39; :440.00, &#39;a4#&#39; :466.16, &#39;b4&#39; :493.92, &#39;c5&#39; :523.28, &#39;c5#&#39; :554.40, &#39;d5&#39; :587.36, &#39;d5#&#39; :622.24, &#39;e5&#39; :659.28, &#39;f5&#39; :698.48, &#39;f5#&#39; :740.00, &#39;g5&#39; :784.00, &#39;g5#&#39; :830.64, &#39;a5&#39; :880.0000 } for (i in D = [&#39;e5&#39;,, &#39;e5&#39;,, &#39;e5&#39;,, &#39;c5&#39;,, &#39;e5&#39;,, &#39;g5&#39;,, &#39;g5&#39;]) { console.log(i); var oscillator = context.</p>
+  <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a></h2>
+  <p><p>One way to play a simple melody&hellip;</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a></h2>
-  <p>var context = new (window.AudioContext || window.webkitAudioContext)(); var oscillator = context.createOscillator(); var volume = context.createGain(); var active = false; volume.gain.setValueAtTime(0, context.currentTime); oscillator.connect(volume).connect(context.destination); oscillator.start(0); document.addEventListener(&#39;mousedown&#39;,function(e){on(e)}) document.addEventListener(&#39;mousemove&#39;,function(e){play(e)}) document.addEventListener(&#39;mouseup&#39;,function(e){off(e)}) function on(e){ active = true; e.preventDefault() oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime); volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime); } function play(e){ e.preventDefault() if(active){ oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime); volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime); } } function off(e){ active = false; volume.gain.setValueAtTime(0, context.currentTime); } </p>
+  <p><p>An effort to make a Theremin that uses the cursor position on screen to control the volume and frequency of a generated sound.</p></p>
 </div>
 
 
 <div class="summary mb-2">
   
   <h2 class="title-summary"><a href="https://siwells.github.io/READY/topics/example_10/">Example #10: Cellular Automata</a></h2>
-  <p>function draw(generation, population){ for (var i=0; i&lt;population.length; i++) { ctx.rect(i*dimension, generation*dimension, dimension, dimension) if(population[i] === 1) { ctx.fillRect(i*dimension, generation*dimension, dimension, dimension) } ctx.stroke(); } } function next_gen(old) { var old = [0].concat(old, [0]); var state = []; // The new state. for (var i=1; i&lt;old.length-1; i++) { if (old[i-1] === 1 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 1) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 0) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 1) { state[i-1] = 0; } else if (old[i-1] === 1 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 0) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 1) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;&amp; old[i] === 1 &amp;&amp; old[i+1] === 0) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 1) { state[i-1] = 1; } else if (old[i-1] === 0 &amp;&amp; old[i] === 0 &amp;&amp; old[i+1] === 0) { state[i-1] = 0; } } return state; } var c = document.</p>
+  <p><p>A rudimentary Cellular Automata. It only generates a limited number of generations, but illustrates how you can use a couple of functions to interact with the screen and create dynamic output.</p></p>
 </div>
 
 
@@ -241,13 +241,16 @@
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
-            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+            <li class="zerostatic"><a href="https://www.simonwells.org">www.simonwells.org</a></li>
+            <li class="zerostatic"><a href="https://github.com/siwells">github.com/siwells</a></li>
+            <li class="zerostatic"><a href="https://github.com/siwells/READY">github.com/siwells/READY</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
   
 

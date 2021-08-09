@@ -123,7 +123,7 @@
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Bit-Tune</a>
+      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
     </li>
     
     <li class="">
@@ -143,7 +143,9 @@
           
 <h1 class="title">Example #6: Graphics - Draw a Circle</h1>
 <div class="content ">
-  <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let c = document.createElement(&#34;canvas&#34;);
+  <p>Draw a circle on screen.</p>
+<p>Notice that we don&rsquo;t use a &ldquo;draw circle&rdquo; function but instead we use a more general &ldquo;draw arc&rdquo; function which takes the center (x,y) coordinates, a radius, a start angle, and a finish angle (technically there is an additional parameter that we can set to control the direction in which the arc is draw, anticlockwise instead of the clockwise default).</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let c = document.createElement(&#34;canvas&#34;);
 var ctx = c.getContext(&#34;2d&#34;);
 ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
@@ -165,13 +167,16 @@ document.body.replaceWith(c);
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
-            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+            <li class="zerostatic"><a href="https://www.simonwells.org">www.simonwells.org</a></li>
+            <li class="zerostatic"><a href="https://github.com/siwells">github.com/siwells</a></li>
+            <li class="zerostatic"><a href="https://github.com/siwells/READY">github.com/siwells/READY</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
   
 
