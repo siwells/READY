@@ -127,7 +127,9 @@
       <guid>https://siwells.github.io/READY/topics/c64/</guid>
       <description>Let&amp;rsquo;s put our money where our mouth is and actually play with a C64. The hardware is relatively rare these days (although still actually available to buy), but there are many really good emulators
 Online C64 Emulator Try out a C64 emulator.
-Some programmes to try out on the emulator&amp;hellip; 10 PRINT &amp;#34;HELLO WORLD!&amp;#34; </description>
+Some programmes to try out on the emulator&amp;hellip; Type it in. Then type RUN and press return.
+The classic first programme:
+10 PRINT &amp;#34;HELLO WORLD!&amp;#34; The first variation on the classic &amp;ldquo;Hello World&amp;rdquo; programme:</description>
     </item>
     
   </channel>
