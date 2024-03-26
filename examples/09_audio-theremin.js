@@ -13,6 +13,7 @@ document.addEventListener('mousemove',function(e){play(e)})
 document.addEventListener('mouseup',function(e){off(e)})
 
 function on(e){
+    context.resume();
     active = true;
     e.preventDefault()
     oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime);
@@ -32,4 +33,3 @@ function off(e){
     active = false;
     volume.gain.setValueAtTime(0, context.currentTime);
 }
-
