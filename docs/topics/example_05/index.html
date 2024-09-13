@@ -7,11 +7,11 @@
   <title>Example #5: Graphics: Canvas Colour - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   
   
-  <link rel="stylesheet" href="/READY/css/style.min.517c54d71d078332bcdb8b1a3bd7ae8dd807fa0d4b7e064ef23ea895ce47c17e.css">
+  <link rel="stylesheet" href="/css/style.min.41049b2a1842666083a16876d883a1781c5538a3e093075b6aaba786e85dc494.css">
   
 
   
@@ -24,7 +24,7 @@
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -35,17 +35,17 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div class="logo-mobile">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -79,55 +79,55 @@
   <ul>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/about/">About</a>
+      <a href="/topics/about/">About</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
+      <a href="/topics/slides/">Slides</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
+      <a href="/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_02/">Example #2: Screen Interaction</a>
+      <a href="/topics/example_02/">Example #2: Screen Interaction</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_03/">Example #3: Screen Output</a>
+      <a href="/topics/example_03/">Example #3: Screen Output</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_04/">Example #4: Interacting with the document</a>
+      <a href="/topics/example_04/">Example #4: Interacting with the document</a>
     </li>
     
     <li class="active ">
-      <a href="https://siwells.github.io/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
+      <a href="/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
+      <a href="/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_07/">Example #7: Audio - Generate a Tone</a>
+      <a href="/topics/example_07/">Example #7: Audio - Generate a Tone</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
+      <a href="/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
+      <a href="/topics/example_09/">Example #9: Audio - A Theremin</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_10/">Example #10: Cellular Automata</a>
+      <a href="/topics/example_10/">Example #10: Cellular Automata</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/c64/">C64 Emulator</a>
+      <a href="/topics/c64/">C64 Emulator</a>
     </li>
     
   </ul>
@@ -140,14 +140,14 @@
 <h1 class="title">Example #5: Graphics: Canvas Colour</h1>
 <div class="content ">
   <p>Set the colour of the background to a given colour.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">var c = document.createElement(&#34;Canvas&#34;);
-c.id = &#34;cv&#34;;
-c.style.cssText = &#39; height: 100%; width: 100%; position:absolute; overflow:hidden; background-color: black; &#39;;
-var ctx = c.getContext(&#34;2d&#34;);
-ctx.canvas.width  = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
-document.body.replaceWith(c);
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">c</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&#34;Canvas&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="s2">&#34;cv&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">cssText</span> <span class="o">=</span> <span class="s1">&#39; height: 100%; width: 100%; position:absolute; overflow:hidden; background-color: black; &#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">width</span>  <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">replaceWith</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span></span></code></pre></div>
 </div>
 </div>
 
@@ -178,7 +178,7 @@ document.body.replaceWith(c);
   
 
   
-  <script type="text/javascript" src="/READY/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  <script type="text/javascript" src="/js/scripts.min.ec19db7e4836c12e2c5e3697d926bc3e4c22005167d9826aab54feca08f0c093.js"></script>
   
 
   
@@ -186,6 +186,7 @@ document.body.replaceWith(c);
   
     
   
+
 
 
 </body>

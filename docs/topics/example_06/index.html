@@ -7,11 +7,11 @@
   <title>Example #6: Graphics - Draw a Circle - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   
   
-  <link rel="stylesheet" href="/READY/css/style.min.517c54d71d078332bcdb8b1a3bd7ae8dd807fa0d4b7e064ef23ea895ce47c17e.css">
+  <link rel="stylesheet" href="/css/style.min.41049b2a1842666083a16876d883a1781c5538a3e093075b6aaba786e85dc494.css">
   
 
   
@@ -24,7 +24,7 @@
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -35,17 +35,17 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div class="logo-mobile">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -79,55 +79,55 @@
   <ul>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/about/">About</a>
+      <a href="/topics/about/">About</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
+      <a href="/topics/slides/">Slides</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
+      <a href="/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_02/">Example #2: Screen Interaction</a>
+      <a href="/topics/example_02/">Example #2: Screen Interaction</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_03/">Example #3: Screen Output</a>
+      <a href="/topics/example_03/">Example #3: Screen Output</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_04/">Example #4: Interacting with the document</a>
+      <a href="/topics/example_04/">Example #4: Interacting with the document</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
+      <a href="/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
     </li>
     
     <li class="active ">
-      <a href="https://siwells.github.io/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
+      <a href="/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_07/">Example #7: Audio - Generate a Tone</a>
+      <a href="/topics/example_07/">Example #7: Audio - Generate a Tone</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
+      <a href="/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
+      <a href="/topics/example_09/">Example #9: Audio - A Theremin</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_10/">Example #10: Cellular Automata</a>
+      <a href="/topics/example_10/">Example #10: Cellular Automata</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/c64/">C64 Emulator</a>
+      <a href="/topics/c64/">C64 Emulator</a>
     </li>
     
   </ul>
@@ -141,13 +141,13 @@
 <div class="content ">
   <p>Draw a circle on screen.</p>
 <p>Notice that we don&rsquo;t use a &ldquo;draw circle&rdquo; function but instead we use a more general &ldquo;draw arc&rdquo; function which takes the center (x,y) coordinates, a radius, a start angle, and a finish angle (technically there is an additional parameter that we can set to control the direction in which the arc is draw, anticlockwise instead of the clockwise default).</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let c = document.createElement(&#34;canvas&#34;);
-var ctx = c.getContext(&#34;2d&#34;);
-ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
-document.body.replaceWith(c);
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">let</span> <span class="n">c</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&#34;canvas&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="n">beginPath</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="n">stroke</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">replaceWith</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span></span></code></pre></div>
 </div>
 </div>
 
@@ -178,7 +178,7 @@ document.body.replaceWith(c);
   
 
   
-  <script type="text/javascript" src="/READY/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  <script type="text/javascript" src="/js/scripts.min.ec19db7e4836c12e2c5e3697d926bc3e4c22005167d9826aab54feca08f0c093.js"></script>
   
 
   
@@ -186,6 +186,7 @@ document.body.replaceWith(c);
   
     
   
+
 
 
 </body>

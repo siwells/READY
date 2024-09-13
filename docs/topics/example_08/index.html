@@ -7,11 +7,11 @@
   <title>Example #8: Audio - A Simple Chip-Tune - READY.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="icon" href="https://siwells.github.io/READY/favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   
   
-  <link rel="stylesheet" href="/READY/css/style.min.517c54d71d078332bcdb8b1a3bd7ae8dd807fa0d4b7e064ef23ea895ce47c17e.css">
+  <link rel="stylesheet" href="/css/style.min.41049b2a1842666083a16876d883a1781c5538a3e093075b6aaba786e85dc494.css">
   
 
   
@@ -24,7 +24,7 @@
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -35,17 +35,17 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div class="logo-mobile">
-      <a href="https://siwells.github.io/READY"><img alt="Logo" src="/READY/images/ready.png" /></a>
+      <a href="/"><img alt="Logo" src="/images/ready.png" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
     
     
     <li class="menu-item-topics">
-      <a href="/READY/topics/">
+      <a href="/topics/">
         <span>Topics</span>
       </a>
     </li>
@@ -79,55 +79,55 @@
   <ul>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/about/">About</a>
+      <a href="/topics/about/">About</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/slides/">Slides</a>
+      <a href="/topics/slides/">Slides</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_01/">Example #1: Hello Napier</a>
+      <a href="/topics/example_01/">Example #1: Hello Napier</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_02/">Example #2: Screen Interaction</a>
+      <a href="/topics/example_02/">Example #2: Screen Interaction</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_03/">Example #3: Screen Output</a>
+      <a href="/topics/example_03/">Example #3: Screen Output</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_04/">Example #4: Interacting with the document</a>
+      <a href="/topics/example_04/">Example #4: Interacting with the document</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
+      <a href="/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
+      <a href="/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_07/">Example #7: Audio - Generate a Tone</a>
+      <a href="/topics/example_07/">Example #7: Audio - Generate a Tone</a>
     </li>
     
     <li class="active ">
-      <a href="https://siwells.github.io/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
+      <a href="/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
+      <a href="/topics/example_09/">Example #9: Audio - A Theremin</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/example_10/">Example #10: Cellular Automata</a>
+      <a href="/topics/example_10/">Example #10: Cellular Automata</a>
     </li>
     
     <li class="">
-      <a href="https://siwells.github.io/READY/topics/c64/">C64 Emulator</a>
+      <a href="/topics/c64/">C64 Emulator</a>
     </li>
     
   </ul>
@@ -141,48 +141,48 @@
 <div class="content ">
   <p>One way to play a simple melody&hellip;</p>
 <p>Notice that we&rsquo;ve chosen to use a square wave for our oscillator so that we can get the authentic 8-bit, bit tune, style of sound?</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">var context = new (window.AudioContext || window.webkit.AudioContext)();
-var freq = {
-    &#39;c4&#39;    :261.6256,
-    &#39;c4#&#39;   :277.1826,
-    &#39;d4&#39;    :293.6648,
-    &#39;d4#&#39;   :311.1270,
-    &#39;e4&#39;    :329.6276,
-    &#39;f4&#39;    :349.2282,
-    &#39;f4#&#39;   :369.9944,
-    &#39;g4&#39;    :391.9954,
-    &#39;g4#&#39;   :415.3047,
-    &#39;a4&#39;    :440.00, 
-    &#39;a4#&#39;   :466.16, 
-    &#39;b4&#39;    :493.92, 
-    &#39;c5&#39;    :523.28, 
-    &#39;c5#&#39;   :554.40, 
-    &#39;d5&#39;    :587.36, 
-    &#39;d5#&#39;   :622.24, 
-    &#39;e5&#39;    :659.28, 
-    &#39;f5&#39;    :698.48, 
-    &#39;f5#&#39;   :740.00, 
-    &#39;g5&#39;    :784.00, 
-    &#39;g5#&#39;   :830.64,
-    &#39;a5&#39;    :880.0000 
-}
-
-for (i in D = [&#39;e5&#39;,, &#39;e5&#39;,, &#39;e5&#39;,, &#39;c5&#39;,, &#39;e5&#39;,, &#39;g5&#39;,, &#39;g5&#39;]) {
-    console.log(i);
-    var oscillator = context.createOscillator();
-    if (D[i]) {
-
-        onended = function() { console.log(&#39;Note has stopped playing&#39;); }
-
-        oscillator.connect(context.destination);
-        note = D[i]
-        oscillator.frequency.setValueAtTime(freq[note], context.currentTime);
-        oscillator.type = &#39;square&#39;;
-        oscillator.start(i * .1);
-        oscillator.stop(i * .1 + .1);
-    }
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">context</span> <span class="o">=</span> <span class="n">new</span> <span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">AudioContext</span> <span class="o">||</span> <span class="n">window</span><span class="o">.</span><span class="n">webkit</span><span class="o">.</span><span class="n">AudioContext</span><span class="p">)();</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">freq</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c4&#39;</span>    <span class="p">:</span><span class="mf">261.6256</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c4#&#39;</span>   <span class="p">:</span><span class="mf">277.1826</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d4&#39;</span>    <span class="p">:</span><span class="mf">293.6648</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d4#&#39;</span>   <span class="p">:</span><span class="mf">311.1270</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;e4&#39;</span>    <span class="p">:</span><span class="mf">329.6276</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f4&#39;</span>    <span class="p">:</span><span class="mf">349.2282</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f4#&#39;</span>   <span class="p">:</span><span class="mf">369.9944</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g4&#39;</span>    <span class="p">:</span><span class="mf">391.9954</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g4#&#39;</span>   <span class="p">:</span><span class="mf">415.3047</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a4&#39;</span>    <span class="p">:</span><span class="mf">440.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a4#&#39;</span>   <span class="p">:</span><span class="mf">466.16</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;b4&#39;</span>    <span class="p">:</span><span class="mf">493.92</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c5&#39;</span>    <span class="p">:</span><span class="mf">523.28</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c5#&#39;</span>   <span class="p">:</span><span class="mf">554.40</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d5&#39;</span>    <span class="p">:</span><span class="mf">587.36</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d5#&#39;</span>   <span class="p">:</span><span class="mf">622.24</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;e5&#39;</span>    <span class="p">:</span><span class="mf">659.28</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f5&#39;</span>    <span class="p">:</span><span class="mf">698.48</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f5#&#39;</span>   <span class="p">:</span><span class="mf">740.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g5&#39;</span>    <span class="p">:</span><span class="mf">784.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g5#&#39;</span>   <span class="p">:</span><span class="mf">830.64</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a5&#39;</span>    <span class="p">:</span><span class="mf">880.0000</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">D</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;c5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;g5&#39;</span><span class="p">,,</span> <span class="s1">&#39;g5&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">oscillator</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">createOscillator</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">onended</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Note has stopped playing&#39;</span><span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">destination</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">note</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">frequency</span><span class="o">.</span><span class="n">setValueAtTime</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">note</span><span class="p">],</span> <span class="n">context</span><span class="o">.</span><span class="n">currentTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;square&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="o">.</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="o">.</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 </div>
 </div>
 
@@ -213,7 +213,7 @@ for (i in D = [&#39;e5&#39;,, &#39;e5&#39;,, &#39;e5&#39;,, &#39;c5&#39;,, &#39;
   
 
   
-  <script type="text/javascript" src="/READY/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  <script type="text/javascript" src="/js/scripts.min.ec19db7e4836c12e2c5e3697d926bc3e4c22005167d9826aab54feca08f0c093.js"></script>
   
 
   
@@ -221,6 +221,7 @@ for (i in D = [&#39;e5&#39;,, &#39;e5&#39;,, &#39;e5&#39;,, &#39;c5&#39;,, &#39;
   
     
   
+
 
 
 </body>

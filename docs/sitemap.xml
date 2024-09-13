@@ -1,88 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://siwells.github.io/READY/topics/about/</loc>
+    <loc>/topics/about/</loc>
     <lastmod>2019-02-11T19:30:08+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/</loc>
+  </url><url>
+    <loc>/topics/</loc>
     <lastmod>2018-11-28T15:14:39+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/slides/</loc>
+  </url><url>
+    <loc>/topics/slides/</loc>
     <lastmod>2019-02-11T19:30:08+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_01/</loc>
+  </url><url>
+    <loc>/topics/example_01/</loc>
     <lastmod>2019-02-11T19:27:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_02/</loc>
+  </url><url>
+    <loc>/topics/example_02/</loc>
     <lastmod>2019-02-11T19:27:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_03/</loc>
+  </url><url>
+    <loc>/topics/example_03/</loc>
     <lastmod>2021-08-06T13:50:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_04/</loc>
+  </url><url>
+    <loc>/topics/example_04/</loc>
     <lastmod>2021-08-06T13:56:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_05/</loc>
+  </url><url>
+    <loc>/topics/example_05/</loc>
     <lastmod>2021-08-06T13:57:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_06/</loc>
+  </url><url>
+    <loc>/topics/example_06/</loc>
     <lastmod>2021-08-06T14:00:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_07/</loc>
+  </url><url>
+    <loc>/topics/example_07/</loc>
     <lastmod>2021-08-06T14:01:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_08/</loc>
+  </url><url>
+    <loc>/topics/example_08/</loc>
     <lastmod>2021-08-06T14:02:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_09/</loc>
+  </url><url>
+    <loc>/topics/example_09/</loc>
     <lastmod>2021-08-06T14:03:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/example_10/</loc>
+  </url><url>
+    <loc>/topics/example_10/</loc>
     <lastmod>2021-08-06T14:04:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/topics/c64/</loc>
+  </url><url>
+    <loc>/topics/c64/</loc>
     <lastmod>2019-02-11T19:27:37+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/</loc>
+  </url><url>
+    <loc>/</loc>
     <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://siwells.github.io/READY/tags/</loc>
-  </url>
-  
 </urlset>

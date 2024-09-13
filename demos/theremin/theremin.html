@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>A Theremin Demonstration</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head> 
+<body>
+    <h1>Theremin</h1>
+    <img src="images/clara-rockmore.jpg" style="width:100%;" id="Vintage phone of Clara Rockmour playing the Theremin">
+    <p>Move the pointer around the screen. When you hold down the mouse button an audio tone will play and when you release the mouse button it will stop. The exact tone and it's volume depends upon where on the screen your pointer is located.</p>
+
+    <script>
+        window.onload = function theremin() {
+            var context = new (window.AudioContext || window.webkitAudioContext)();
+            var oscillator = context.createOscillator();
+            var volume = context.createGain();
+            var active = false;
+
+            volume.gain.setValueAtTime(0, context.currentTime);
+
+            oscillator.connect(volume).connect(context.destination);
+            oscillator.start(0);
+
+            document.addEventListener('mousedown',function(e){on(e)})
+            document.addEventListener('mousemove',function(e){play(e)})
+            document.addEventListener('mouseup',function(e){off(e)})
+
+            function on(e){
+                context.resume();
+                active = true;
+                e.preventDefault()
+                oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime);
+                volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime);
+            }
+
+
+            function play(e){
+                e.preventDefault()
+                if(active){
+                    oscillator.frequency.setValueAtTime(~~(1000*(1-((e.clientY)/window.innerHeight))), context.currentTime);
+                    volume.gain.setValueAtTime(~~(e.clientX/window.innerWidth*100)/100, context.currentTime);
+                }
+            }
+
+            function off(e){
+                active = false;
+                volume.gain.setValueAtTime(0, context.currentTime);
+            }          
+        }
+    </script>
+</body>
+</html>
