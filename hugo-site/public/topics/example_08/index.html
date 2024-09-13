@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/READY/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=READY/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Example #8: Audio - A Simple Chip-Tune - READY.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="http://localhost:1313/READY/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/READY/css/style.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-topics">
+      <a href="/READY/topics/">
+        <span>Topics</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="http://localhost:1313/READY/"><img alt="Logo" src="/READY/images/ready.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="http://localhost:1313/READY/"><img alt="Logo" src="/READY/images/ready.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-topics">
+      <a href="/READY/topics/">
+        <span>Topics</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Topics</h4>
+  <ul>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/slides/">Slides</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_01/">Example #1: Hello Napier</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_02/">Example #2: Screen Interaction</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_03/">Example #3: Screen Output</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_04/">Example #4: Interacting with the document</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_05/">Example #5: Graphics: Canvas Colour</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_06/">Example #6: Graphics - Draw a Circle</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_07/">Example #7: Audio - Generate a Tone</a>
+    </li>
+    
+    <li class="active ">
+      <a href="http://localhost:1313/READY/topics/example_08/">Example #8: Audio - A Simple Chip-Tune</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_09/">Example #9: Audio - A Theremin</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/example_10/">Example #10: Cellular Automata</a>
+    </li>
+    
+    <li class="">
+      <a href="http://localhost:1313/READY/topics/c64/">C64 Emulator</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Example #8: Audio - A Simple Chip-Tune</h1>
+<div class="content ">
+  <p>One way to play a simple melody&hellip;</p>
+<p>Notice that we&rsquo;ve chosen to use a square wave for our oscillator so that we can get the authentic 8-bit, bit tune, style of sound?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">context</span> <span class="o">=</span> <span class="n">new</span> <span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">AudioContext</span> <span class="o">||</span> <span class="n">window</span><span class="o">.</span><span class="n">webkit</span><span class="o">.</span><span class="n">AudioContext</span><span class="p">)();</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">freq</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c4&#39;</span>    <span class="p">:</span><span class="mf">261.6256</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c4#&#39;</span>   <span class="p">:</span><span class="mf">277.1826</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d4&#39;</span>    <span class="p">:</span><span class="mf">293.6648</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d4#&#39;</span>   <span class="p">:</span><span class="mf">311.1270</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;e4&#39;</span>    <span class="p">:</span><span class="mf">329.6276</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f4&#39;</span>    <span class="p">:</span><span class="mf">349.2282</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f4#&#39;</span>   <span class="p">:</span><span class="mf">369.9944</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g4&#39;</span>    <span class="p">:</span><span class="mf">391.9954</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g4#&#39;</span>   <span class="p">:</span><span class="mf">415.3047</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a4&#39;</span>    <span class="p">:</span><span class="mf">440.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a4#&#39;</span>   <span class="p">:</span><span class="mf">466.16</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;b4&#39;</span>    <span class="p">:</span><span class="mf">493.92</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c5&#39;</span>    <span class="p">:</span><span class="mf">523.28</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;c5#&#39;</span>   <span class="p">:</span><span class="mf">554.40</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d5&#39;</span>    <span class="p">:</span><span class="mf">587.36</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;d5#&#39;</span>   <span class="p">:</span><span class="mf">622.24</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;e5&#39;</span>    <span class="p">:</span><span class="mf">659.28</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f5&#39;</span>    <span class="p">:</span><span class="mf">698.48</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;f5#&#39;</span>   <span class="p">:</span><span class="mf">740.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g5&#39;</span>    <span class="p">:</span><span class="mf">784.00</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;g5#&#39;</span>   <span class="p">:</span><span class="mf">830.64</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;a5&#39;</span>    <span class="p">:</span><span class="mf">880.0000</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">D</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;c5&#39;</span><span class="p">,,</span> <span class="s1">&#39;e5&#39;</span><span class="p">,,</span> <span class="s1">&#39;g5&#39;</span><span class="p">,,</span> <span class="s1">&#39;g5&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">oscillator</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">createOscillator</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">onended</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Note has stopped playing&#39;</span><span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">destination</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">note</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">frequency</span><span class="o">.</span><span class="n">setValueAtTime</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">note</span><span class="p">],</span> <span class="n">context</span><span class="o">.</span><span class="n">currentTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;square&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="o">.</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">oscillator</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="o">.</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/READY/js/scripts.js"></script>
+  
+
+  
+
+
+
+</body>
+
+</html>
