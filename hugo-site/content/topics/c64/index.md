@@ -13,7 +13,7 @@ First give this tutorial a try: [C64 tutorial](https://tomasp.net/commodore64/).
 
 ## Online C64 Emulator
 
-Once you've done the above tutorial, it's worth trying an emulator of the actual hardware. One which uses an accurate memory map and more accurate version of BASIC.So try out this [C64 emulator](https://siwells.github.io/READY/demos/c64/index.html). It's worth opening in a new tab so you can see the sample programmes in the next section to aid whilst typing them in.
+Once you've done the above tutorial, it's worth trying an emulator of the actual hardware. One which uses an accurate memory map and more accurate version of BASIC.So try out this [C64 emulator](/demos/c64/index.html). It's worth opening in a new tab so you can see the sample programmes in the next section to aid whilst typing them in.
 
 
 ## Some programmes to try out on the emulator...
