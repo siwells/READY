@@ -52,4 +52,4 @@ function off(e){
 
 ## Live Demo
 
-Try out a [live demo](https://siwells.github.io/READY/demos/theremin/theremin.html) of the Theremin
+Try out a [live demo](/demos/theremin/theremin.html) of the Theremin
