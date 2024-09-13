@@ -12,7 +12,7 @@ This is probably the best place to start to get an overview of things. All of th
 
 ## Download
 
-Download your own copy here
+[Latest Slidedeck](/slides/freshers.talk.pdf)
 
 ## Online
 
