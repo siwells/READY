@@ -32,7 +32,7 @@ summaryLength = 0
 #  homepage_button_link = '/topics'
 #  homepage_button_text = 'Topics'
 #  homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
-  homepage_image = '/images/c64.png'
+  homepage_image = 'images/c64.png'
 
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
@@ -49,5 +49,5 @@ summaryLength = 0
     meta_twitter_creator = "@zerostaticio"
 
   [params.logo]
-      mobile = "/images/ready.png"
-      standard  = "/images/ready.png"
+      mobile = "images/ready.png"
+      standard  = "images/ready.png"
